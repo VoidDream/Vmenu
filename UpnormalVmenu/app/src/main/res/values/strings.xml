@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Upnormal Vmenu</string>
+    <string name="pencarian">Pencarian</string>\
+    <string name="kategori">Kategori</string>
 </resources>

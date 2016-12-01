@@ -18,4 +18,10 @@
     <dimen name="margin5">22dp</dimen>
     <dimen name="margin6">18dp</dimen>
 
+    <!-- DIVIDER -->
+    <dimen name="divider1">1dp</dimen>
+    <dimen name="divider2">2dp</dimen>
+
+    <dimen name="divider3">0.5dp</dimen>
+
 </resources>
