@@ -23,7 +23,12 @@ public class MenuCustomAdapter extends BaseAdapter {
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    String[] menu = new String[]{"Vanilla Milkshake", "Susu Kocok Panila", "Susu Bendera"};
+    String[] menu = new String[]{"Vanilla Milkshake", "Dancow Dingin", "Susu Bendera", "Susu Murni"};
+    String[] detil = new String[]{"Susu sapi asli yang dikocok dengan kasih sayang dari seorang koki profesional dengan rasa panila yang gurih di lidah membuat anda mabuk kepayang",
+            "Susu dancow sachet yang diseduh lalu di blend dengan es yang menggiurkan",
+            "Susu bendera kental manis siap menggoyang mulutmu",
+            "Susu murni langsung dari sapi asli"};
+    String[] cost = new String[]{"35.000", "15.000", "7.500", "11.000"};
 
     @Override
     public int getCount() {
@@ -50,8 +55,12 @@ public class MenuCustomAdapter extends BaseAdapter {
         if (convertView == null){
             convertView = inflater.inflate(R.layout.custom_list_menu, null);
         }
-        TextView kategori_ = (TextView)convertView.findViewById(R.id.nama);
-        kategori_.setText(menu[position]);
+        TextView nama = (TextView)convertView.findViewById(R.id.nama);
+        TextView keterangan = (TextView)convertView.findViewById(R.id.keterangan);
+        TextView harga = (TextView)convertView.findViewById(R.id.harga);
+        nama.setText(menu[position]);
+        keterangan.setText(detil[position]);
+        harga.setText("Rp"+cost[position]);
         return convertView;
     }
 }
