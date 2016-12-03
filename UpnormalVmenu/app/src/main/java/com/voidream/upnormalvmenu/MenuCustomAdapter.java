@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
@@ -58,6 +60,7 @@ public class MenuCustomAdapter extends BaseAdapter {
         TextView nama = (TextView)convertView.findViewById(R.id.nama);
         TextView keterangan = (TextView)convertView.findViewById(R.id.keterangan);
         TextView harga = (TextView)convertView.findViewById(R.id.harga);
+        RelativeLayout click = (RelativeLayout)convertView.findViewById(R.id.gradient);
         nama.setText(menu[position]);
         keterangan.setText(detil[position]);
         harga.setText("Rp"+cost[position]);
