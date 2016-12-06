@@ -42,7 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/nama"
-                    android:textSize="@dimen/title"
+                    android:textSize="@dimen/static_title"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"
                     android:maxLines="1"
@@ -52,7 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/keterangan"
-                    android:textSize="@dimen/caption"
+                    android:textSize="@dimen/static_caption"
                     android:textColor="@android:color/white"
                     android:maxLines="3"
                     android:ellipsize="end"/>
@@ -65,7 +65,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/harga"
-                        android:textSize="@dimen/body"
+                        android:textSize="@dimen/static_body"
                         android:textColor="@android:color/white"
                         android:maxLines="3"
                         android:ellipsize="end"
@@ -76,7 +76,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_chef_white_18dp"
                         android:id="@+id/imageView2"
-                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
                         android:layout_toLeftOf="@+id/imageView3"
                         android:layout_toStartOf="@+id/imageView3" />
 

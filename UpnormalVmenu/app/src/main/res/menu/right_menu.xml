@@ -8,8 +8,8 @@ tools:context=".MainActivity">
     <item
         android:id="@+id/pesanan"
         android:orderInCategory="100"
-        android:title="@string/pencarian"
-        android:icon="@drawable/ic_apps_white_24dp"
+        android:title="@string/daftar_pesanan"
+        android:icon="@drawable/ic_content_paste_white_24dp"
         app:showAsAction="always" />
 
     <item
