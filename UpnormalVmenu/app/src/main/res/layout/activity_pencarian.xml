@@ -30,7 +30,6 @@
             android:id="@+id/editText_pencarian"
             android:textColor="@android:color/white"
             android:textColorHint="@color/white54"
-            android:inputType="text"
             android:hint="@string/pencarian"
             android:background="@android:color/transparent"
             android:layout_alignParentTop="true"
@@ -40,7 +39,8 @@
             android:layout_toEndOf="@+id/button_back"
             android:textSize="@dimen/title"
             android:paddingLeft="@dimen/space_between_content"
-            android:paddingRight="@dimen/screen_edge" />
+            android:paddingRight="@dimen/screen_edge"
+            android:inputType="textPersonName" />
     </RelativeLayout>
 
     <ListView

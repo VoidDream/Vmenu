@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.voidream.upnormalvmenu.DaftarPesanan">
+
+    <Button
+        android:text="@string/pesan_sekarang"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_menu"
+        android:id="@+id/pesan_sekarang"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_transparent"
+        android:gravity="right|center_vertical"
+        android:paddingRight="@dimen/screen_edge"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="@dimen/static_body"
+        android:drawableRight="@drawable/ic_navigate_next_black_24dp" />
+
+    <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:theme="?attr/actionBarTheme"
+                android:id="@+id/toolbar"
+                android:elevation="2dp" />
+
+    <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/daftar_pesanan"
+                android:divider="@android:color/transparent"
+                android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/pesan_sekarang" />
+
+</RelativeLayout>

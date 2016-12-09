@@ -25,12 +25,12 @@ public class MenuCustomAdapter extends BaseAdapter {
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    String[] menu = new String[]{"Vanilla Milkshake", "Dancow Dingin", "Susu Bendera", "Susu Murni"};
-    String[] detil = new String[]{"Susu sapi asli yang dikocok dengan kasih sayang dari seorang koki profesional dengan rasa panila yang gurih di lidah membuat anda mabuk kepayang",
+    private String[] menu = new String[]{"Vanilla Milkshake", "Dancow Dingin", "Susu Bendera", "Susu Murni"};
+    private String[] detil = new String[]{"Susu sapi asli yang dikocok dengan kasih sayang dari seorang koki profesional dengan rasa panila yang gurih di lidah membuat anda mabuk kepayang",
             "Susu dancow sachet yang diseduh lalu di blend dengan es yang menggiurkan",
             "Susu bendera kental manis siap menggoyang mulutmu",
             "Susu murni langsung dari sapi asli"};
-    String[] cost = new String[]{"35.000", "15.000", "7.500", "11.000"};
+    private String[] cost = new String[]{"35.000", "15.000", "7.500", "11.000"};
 
     @Override
     public int getCount() {

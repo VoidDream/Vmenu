@@ -19,8 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Pencarian"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Pencarian"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DaftarPesanan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity android:name=".PesanSekarang"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
     </application>
 
 </manifest>

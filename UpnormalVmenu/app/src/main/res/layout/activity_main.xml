@@ -23,7 +23,7 @@
         android:id="@+id/daftar_kategori"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:divider="@color/colorPrimaryPassive"
+        android:divider="@color/black22"
         android:dividerHeight="@dimen/divider1"
         android:layout_below="@+id/toolbar" />
 </RelativeLayout>

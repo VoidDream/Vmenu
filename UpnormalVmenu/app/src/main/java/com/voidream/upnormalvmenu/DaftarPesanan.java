@@ -7,35 +7,30 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+public class DaftarPesanan extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_daftar_pesanan);
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(R.string.kategori);
-        ListView daftar_kategori = (ListView)findViewById(R.id.daftar_kategori);
-        KategoriCustomAdapter kategori = new KategoriCustomAdapter(MainActivity.this);
-        daftar_kategori.setAdapter(kategori);
+        getSupportActionBar().setTitle(R.string.daftar_pesanan);
+        ListView daftar_pesanan = (ListView)findViewById(R.id.daftar_pesanan);
+        Button pesan_sekarang = (Button)findViewById(R.id.pesan_sekarang);
+        DaftarPesananCustomAdapter pesanan = new DaftarPesananCustomAdapter(DaftarPesanan.this);
+        daftar_pesanan.setAdapter(pesanan);
 
-        daftar_kategori.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        pesan_sekarang.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                Intent intent_pencarian= new Intent(MainActivity.this, Pencarian.class);
-                startActivity(intent_pencarian);
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
+            public void onClick(View v) {
+                Intent intent_pesan_sekarang= new Intent(DaftarPesanan.this, PesanSekarang.class);
+                startActivity(intent_pesan_sekarang);
+                finish();
             }
         });
 
@@ -43,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.right_menu, menu);
+        getMenuInflater().inflate(R.menu.search_menu, menu);
         return  true;
     }
 
@@ -56,13 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.pencarian) {
-            Intent intent_pencarian= new Intent(MainActivity.this, Pencarian.class);
+            Intent intent_pencarian= new Intent(DaftarPesanan.this, Pencarian.class);
             startActivity(intent_pencarian);
-            return true;
-        }
-        if (id == R.id.pesanan) {
-            Intent intent_pesanan= new Intent(MainActivity.this, DaftarPesanan.class);
-            startActivity(intent_pesanan);
+            finish();
             return true;
         }
 

@@ -3,4 +3,9 @@
     <string name="pencarian">Pencarian</string>\
     <string name="kategori">Kategori</string>
     <string name="daftar_pesanan">Daftar Pesanan</string>
+    <string name="nama_pemesan">Nama Pemesan</string>
+    <string name="meja">Meja</string>
+    <string name="pesan_sekarang">Pesan Sekarang</string>
+    <string name="kirim">Kirim</string>
+    <string name="pesanan">Pesanan</string>
 </resources>

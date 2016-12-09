@@ -15,20 +15,21 @@ import android.widget.TextView;
  * Created by Abi Karami on 11/30/2016.
  */
 
-public class KategoriCustomAdapter extends BaseAdapter {
+public class DaftarPesananCustomAdapter extends BaseAdapter {
 
     private LayoutInflater inflater;
 
-    KategoriCustomAdapter (Activity activity){
+    DaftarPesananCustomAdapter (Activity activity){
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    private String[] kategori = new String[]{"Makanan Berat", "Snack", "Dessert", "Sangu", "Cai", "Special Drinks", "Coffee"};
+    private String[] pesanan = new String[]{"2 Vanilla Milkshake", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "TOTAL"};
+    private String[] harga = new String[]{"Rp70.000", "Rp45.000", "Rp45.000","Rp45.000","Rp45.000","Rp45.000","Rp45.000","Rp45.000","Rp45.000", "Rp430.000"};
 
     @Override
     public int getCount() {
-        if (kategori != null){
-            return kategori.length;
+        if (pesanan != null){
+            return pesanan.length;
         }else {
             return 0;
         }
@@ -36,7 +37,7 @@ public class KategoriCustomAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return kategori[position];
+        return pesanan[position];
     }
 
     @Override
@@ -48,10 +49,13 @@ public class KategoriCustomAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null){
-            convertView = inflater.inflate(R.layout.custom_list_kategori, null);
+            convertView = inflater.inflate(R.layout.custom_list_daftar_pesanan, null);
         }
-        TextView kategori_ = (TextView)convertView.findViewById(R.id.kategori);
-        kategori_.setText(kategori[position]);
+        TextView pesanan_ = (TextView)convertView.findViewById(R.id.pesanan);
+        TextView harga_ = (TextView)convertView.findViewById(R.id.harga);
+        pesanan_.setText(pesanan[position]);
+        harga_.setText(harga[position]);
+        //if(position==pesanan.length-1){pesanan_.setTypeface(Typeface.DEFAULT_BOLD);}
         return convertView;
     }
 }
