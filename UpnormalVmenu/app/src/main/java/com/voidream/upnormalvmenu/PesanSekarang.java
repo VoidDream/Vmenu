@@ -23,9 +23,9 @@ public class PesanSekarang extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(getApplication().getApplicationContext(),"Pesanan A/N Abi Karami sedang dikirim",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplication().getApplicationContext(),"Pesanan sedang dikirim",Toast.LENGTH_SHORT).show();
                 finish();
-                Toast.makeText(getApplication().getApplicationContext(),"Pesanan A/N Abi Karami sukses!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplication().getApplicationContext(),"Pesanan A/N Abi Karami Meja 21 sukses!",Toast.LENGTH_SHORT).show();
             }
         });
         ImageButton back = (ImageButton) findViewById(R.id.button_back);
