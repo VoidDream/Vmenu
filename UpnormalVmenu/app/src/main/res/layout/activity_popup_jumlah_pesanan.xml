@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.voidream.upnormalvmenu.PopupJumlahPesanan"
-    android:background="@color/black38">
+    android:background="@color/black54">
 
     <LinearLayout
         android:orientation="vertical"
@@ -93,6 +93,20 @@
                 android:background="@drawable/button_primary"
                 android:textSize="@dimen/statusbar" />
         </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider1"
+            android:src="@color/black22"
+            android:id="@+id/imageView" />
+
+        <Button
+            android:text="@string/tambahkan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_menu"
+            android:id="@+id/tambahkan"
+            android:background="@drawable/button_transparent"
+            android:textColor="@color/colorPrimary" />
 
     </LinearLayout>
 </RelativeLayout>
