@@ -30,7 +30,7 @@
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:textSize="@dimen/static_subheading"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/black87" />
 
             <TextView
                 android:layout_width="match_parent"

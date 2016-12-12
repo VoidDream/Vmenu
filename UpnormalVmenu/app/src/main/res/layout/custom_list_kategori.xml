@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,4 +21,10 @@
         android:paddingLeft="@dimen/screen_edge"
         android:drawableRight="@drawable/ic_navigate_next_black_24dp" />
 
-</RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider1"
+        app:srcCompat="@color/black22"
+        android:id="@+id/imageView4" />
+
+</LinearLayout>

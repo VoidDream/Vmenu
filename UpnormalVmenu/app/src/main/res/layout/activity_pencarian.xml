@@ -9,6 +9,19 @@
     android:layout_height="match_parent"
     tools:context="com.voidream.upnormalvmenu.Pencarian">
 
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_content_paste_white_24dp"
+        android:id="@+id/floatingActionButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/right_side_icon"
+        android:layout_marginBottom="@dimen/right_side_icon"
+        app:backgroundTint="@color/colorPrimary" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"

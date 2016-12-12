@@ -1,9 +1,12 @@
 package com.voidream.upnormalvmenu;
 
+import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,22 +20,27 @@ public class DaftarPesanan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar_pesanan);
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent_pesan_sekarang= new Intent(DaftarPesanan.this, PesanSekarang.class);
+                startActivity(intent_pesan_sekarang);
+
+            }
+        });
+
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.daftar_pesanan);
         ListView daftar_pesanan = (ListView)findViewById(R.id.daftar_pesanan);
-        Button pesan_sekarang = (Button)findViewById(R.id.pesan_sekarang);
         DaftarPesananCustomAdapter pesanan = new DaftarPesananCustomAdapter(DaftarPesanan.this);
         daftar_pesanan.setAdapter(pesanan);
-
-        pesan_sekarang.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent_pesan_sekarang= new Intent(DaftarPesanan.this, PesanSekarang.class);
-                startActivity(intent_pesan_sekarang);
-                finish();
-            }
-        });
+        View footerView = ((LayoutInflater) this.getApplicationContext()
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(
+                R.layout.custom_list_footer, null, false);
+        daftar_pesanan.addFooterView(footerView);
 
     }
 
