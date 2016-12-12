@@ -71,7 +71,7 @@
                 android:textSize="@dimen/statusbar" />
 
             <TextView
-                android:text="0"
+                android:text="1"
                 android:layout_width="@dimen/list_menu"
                 android:layout_height="@dimen/list_menu"
                 android:id="@+id/jumlah"
