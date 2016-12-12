@@ -32,9 +32,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme2"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".PopupJumlahPesanan"
+        <activity
+            android:name=".PopupJumlahPesanan"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Translucent"/>
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity android:name=".SuksesMemesan"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

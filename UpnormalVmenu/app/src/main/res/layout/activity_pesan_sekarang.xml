@@ -54,7 +54,7 @@
         android:layout_height="@dimen/toolbar">
 
         <TextView
-            android:text="A/N"
+            android:text="@string/a_n"
             android:layout_width="@dimen/list_menu"
             android:layout_height="wrap_content"
             android:id="@+id/form1"
@@ -90,7 +90,7 @@
         android:layout_height="@dimen/toolbar">
 
         <TextView
-            android:text="Meja"
+            android:text="@string/meja"
             android:layout_width="@dimen/list_menu"
             android:layout_height="wrap_content"
             android:id="@+id/form2"
