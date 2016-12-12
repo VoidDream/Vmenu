@@ -22,15 +22,19 @@
         <activity
             android:name=".Pencarian"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".DaftarPesanan"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme2" />
-        <activity android:name=".PesanSekarang"
+        <activity
+            android:name=".PesanSekarang"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme2"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".PopupJumlahPesanan"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent"/>
     </application>
 
 </manifest>

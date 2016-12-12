@@ -23,7 +23,7 @@ public class KategoriCustomAdapter extends BaseAdapter {
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    private String[] kategori = new String[]{"Makanan Berat", "Snack", "Dessert", "Sangu", "Cai", "Special Drinks", "Coffee"};
+    private String[] kategori = new String[]{"Makanan Berat", "Snack", "Dessert", "Sangu", "Cai", "Special Drinks", "Coffee", "Permen", "Buah", "Dessert", "X-treme Food"};
 
     @Override
     public int getCount() {

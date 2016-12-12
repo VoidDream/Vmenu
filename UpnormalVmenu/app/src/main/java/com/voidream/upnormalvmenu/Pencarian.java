@@ -38,9 +38,8 @@ public class Pencarian extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent_main= new Intent(Pencarian.this, MainActivity.class);
+                Intent intent_main= new Intent(Pencarian.this, PopupJumlahPesanan.class);
                 startActivity(intent_main);
-                finish();
             }
         });
 
