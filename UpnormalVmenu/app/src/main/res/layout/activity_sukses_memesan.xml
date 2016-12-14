@@ -18,6 +18,8 @@
         android:text="@string/kembali"
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_menu"
+        android:textSize="@dimen/static_button"
+        style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
         android:id="@+id/kembali"
         android:layout_alignParentBottom="true"
         android:background="@drawable/button_transparent"
@@ -44,7 +46,8 @@
                 android:gravity="center"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/static_body"
-                android:textColor="@color/black54" />
+                android:textColor="@color/black54"
+                style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
             <TextView
                 android:text="Cinta"
                 android:gravity="center"
@@ -76,7 +79,8 @@
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/static_body"
                 android:textColor="@color/black54"
-                android:layout_marginTop="@dimen/space_between_content" />
+                android:layout_marginTop="@dimen/space_between_content"
+                style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
         </LinearLayout>
     </RelativeLayout>
 

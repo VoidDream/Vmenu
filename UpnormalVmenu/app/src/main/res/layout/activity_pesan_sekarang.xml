@@ -62,7 +62,8 @@
             android:textSize="@dimen/static_subheading"
             android:layout_marginLeft="@dimen/screen_edge"
             android:textColor="@color/black54"
-            android:ellipsize="end" />
+            android:ellipsize="end"
+            style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -77,7 +78,8 @@
             android:textColor="@android:color/black"
             android:layout_marginRight="@dimen/right_side_icon"
             android:maxLines="1"
-            android:layout_marginLeft="@dimen/space_between_content" />
+            android:layout_marginLeft="@dimen/space_between_content"
+            style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
     </LinearLayout>
     <ImageView
         android:layout_width="match_parent"
@@ -98,7 +100,8 @@
             android:textSize="@dimen/static_subheading"
             android:layout_marginLeft="@dimen/screen_edge"
             android:textColor="@color/black54"
-            android:ellipsize="end" />
+            android:ellipsize="end"
+            style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -114,6 +117,7 @@
             android:maxLines="1"
             android:layout_marginLeft="@dimen/space_between_content"
             android:inputType="numberDecimal"
-            android:maxLength="3" />
+            android:maxLength="3"
+            style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
     </LinearLayout>
 </LinearLayout>

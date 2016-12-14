@@ -29,7 +29,8 @@
                 android:textColor="@color/black54"
                 android:layout_gravity="right"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/screen_edge" />
+                android:layout_marginRight="@dimen/screen_edge"
+                style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
 
             <TextView
                 android:text="Ice Vanilla Milkshake"
@@ -46,7 +47,8 @@
                 android:layout_centerVertical="true"
                 android:layout_toLeftOf="@+id/harga"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
         </RelativeLayout>
 
         <LinearLayout
@@ -105,8 +107,10 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/list_menu"
             android:id="@+id/tambahkan"
+            android:textSize="@dimen/static_button"
             android:background="@drawable/button_transparent"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimary"
+            style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
 
     </LinearLayout>
 </RelativeLayout>

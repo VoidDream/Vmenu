@@ -14,29 +14,33 @@
         android:scaleType="centerCrop"
         android:adjustViewBounds="true" />
 
-    <TextView
-        android:text="Special Drinks"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/kategori"
-        android:maxLines="2"
-        android:ellipsize="end"
-        android:textSize="@dimen/static_body"
-        android:textColor="@color/black87"
-        android:layout_below="@+id/menu_image"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:paddingLeft="@dimen/space_between_content"
-        android:paddingRight="@dimen/space_between_content"
-        android:paddingTop="@dimen/space_between_content"
-        android:paddingBottom="@dimen/screen_edge" />
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignBottom="@+id/kategori"
         android:layout_alignParentTop="true"
-        android:background="@drawable/edittext"/>
+        android:background="@drawable/bottom_gradient"/>
+
+    <TextView
+        android:text="Special Drinks"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="-46dp"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/space_between_content"
+        android:paddingLeft="@dimen/space_between_content"
+        android:paddingRight="@dimen/space_between_content"
+        android:id="@+id/kategori"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="@dimen/static_body"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/menu_image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+
 
 
 </RelativeLayout>

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     GridView grid;
     String[] daftar_kategori = {
-            "Special Drinks1",
+            "Super Motherfucker Fuckin Very Special Drinks ",
             "Special Drinks2",
             "Special Drinks3"
 

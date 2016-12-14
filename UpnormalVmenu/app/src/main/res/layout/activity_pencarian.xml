@@ -24,7 +24,8 @@
         android:textSize="@dimen/static_caption"
         android:textStyle="bold"
         android:background="@drawable/badge_circle"
-        android:elevation="@dimen/space_between_content"/>
+        android:elevation="@dimen/space_between_content"
+        style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
@@ -70,7 +71,8 @@
             android:textSize="@dimen/title"
             android:paddingLeft="@dimen/space_between_content"
             android:paddingRight="@dimen/screen_edge"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
     </RelativeLayout>
 
     <ListView

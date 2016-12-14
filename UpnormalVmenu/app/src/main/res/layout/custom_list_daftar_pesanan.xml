@@ -30,14 +30,16 @@
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:textSize="@dimen/static_subheading"
-                android:textColor="@color/black87" />
+                android:textColor="@color/black87"
+                style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/harga"
                 android:textSize="@dimen/static_body"
-                android:textColor="@color/black54" />
+                android:textColor="@color/black54"
+                style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
         </LinearLayout>
     </RelativeLayout>
 

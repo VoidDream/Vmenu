@@ -24,7 +24,8 @@
         android:textSize="@dimen/static_caption"
         android:textStyle="bold"
         android:background="@drawable/badge_circle"
-        android:elevation="@dimen/space_between_content"/>
+        android:elevation="@dimen/space_between_content"
+        style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
@@ -58,9 +59,7 @@
         android:id="@+id/grid"
         android:numColumns="2"
         android:layout_below="@+id/toolbar"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:verticalSpacing="@dimen/space_between_content"
-        android:horizontalSpacing="@dimen/space_between_content"
-        android:layout_margin="@dimen/screen_edge" />
+        android:verticalSpacing="4dp"
+        android:horizontalSpacing="4dp"
+        android:layout_margin="4dp"/>
 </RelativeLayout>

@@ -46,7 +46,8 @@
                     android:textColor="@android:color/white"
                     android:textStyle="bold"
                     android:maxLines="1"
-                    android:ellipsize="end"/>
+                    android:ellipsize="end"
+                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -55,7 +56,8 @@
                     android:textSize="@dimen/static_caption"
                     android:textColor="@android:color/white"
                     android:maxLines="3"
-                    android:ellipsize="end"/>
+                    android:ellipsize="end"
+                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -70,7 +72,8 @@
                         android:maxLines="3"
                         android:ellipsize="end"
                         android:textStyle="bold"
-                        android:layout_centerVertical="true"/>
+                        android:layout_centerVertical="true"
+                        style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
