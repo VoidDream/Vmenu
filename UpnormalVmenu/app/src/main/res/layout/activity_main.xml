@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
-    android:background="@android:color/white"
+    android:background="#f5f5f5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.voidream.upnormalvmenu.MainActivity">
@@ -39,15 +39,6 @@
         android:layout_marginBottom="@dimen/right_side_icon"
         app:backgroundTint="@color/colorPrimary" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/daftar_kategori"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:divider="@android:color/transparent"
-        android:layout_below="@+id/toolbar" />
-
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
@@ -57,5 +48,19 @@
         android:elevation="2dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:horizontalSpacing="@dimen/divider2"
+        android:verticalSpacing="@dimen/divider2" />
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/grid"
+        android:numColumns="2"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:verticalSpacing="@dimen/space_between_content"
+        android:horizontalSpacing="@dimen/space_between_content"
+        android:layout_margin="@dimen/screen_edge" />
 </RelativeLayout>

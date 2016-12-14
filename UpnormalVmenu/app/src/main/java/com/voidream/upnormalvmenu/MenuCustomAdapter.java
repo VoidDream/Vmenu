@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -25,12 +26,17 @@ public class MenuCustomAdapter extends BaseAdapter {
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    private String[] menu = new String[]{"Vanilla Milkshake", "Dancow Dingin", "Susu Bendera", "Susu Murni"};
+    private String[] menu = new String[]{"Vanilla Milkshake", "Tiramisu Coffee Latte", "Greentea Latte"};
     private String[] detil = new String[]{"Susu sapi asli yang dikocok dengan kasih sayang dari seorang koki profesional dengan rasa panila yang gurih di lidah membuat anda mabuk kepayang",
-            "Susu dancow sachet yang diseduh lalu di blend dengan es yang menggiurkan",
-            "Susu bendera kental manis siap menggoyang mulutmu",
-            "Susu murni langsung dari sapi asli"};
+            "Kopi Good Day rasa Tiramisu beli di warung pinggir jalan, manteb",
+            "Teh hijau dengan campuran latte, manteb"};
     private String[] cost = new String[]{"35.000", "15.000", "7.500", "11.000"};
+    private int[] imageId = {
+                R.drawable.dummy,
+                R.drawable.dummy1,
+                R.drawable.dummy2
+
+    };
 
     @Override
     public int getCount() {
@@ -60,7 +66,9 @@ public class MenuCustomAdapter extends BaseAdapter {
         TextView nama = (TextView)convertView.findViewById(R.id.nama);
         TextView keterangan = (TextView)convertView.findViewById(R.id.keterangan);
         TextView harga = (TextView)convertView.findViewById(R.id.harga);
+        ImageView image_menu = (ImageView) convertView.findViewById(R.id.menu_image);
         RelativeLayout click = (RelativeLayout)convertView.findViewById(R.id.gradient);
+        image_menu.setImageResource(imageId[position]);
         nama.setText(menu[position]);
         keterangan.setText(detil[position]);
         harga.setText("Rp"+cost[position]);

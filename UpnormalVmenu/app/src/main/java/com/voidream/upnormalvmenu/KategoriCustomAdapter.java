@@ -1,14 +1,11 @@
 package com.voidream.upnormalvmenu;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Typeface;
-import android.hardware.camera2.params.StreamConfigurationMap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -17,41 +14,53 @@ import android.widget.TextView;
 
 public class KategoriCustomAdapter extends BaseAdapter {
 
-    private LayoutInflater inflater;
+    private Context mContext;
+    private final String[] daftar_kategori;
+    private final int[] Imageid;
 
-    KategoriCustomAdapter (Activity activity){
-        inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    public KategoriCustomAdapter(Context c, String[] daftar_kategori, int[] Imageid) {
+        mContext = c;
+        this.Imageid = Imageid;
+        this.daftar_kategori = daftar_kategori;
     }
-
-    private String[] kategori = new String[]{"Makanan Berat", "Snack", "Dessert", "Sangu", "Cai", "Special Drinks", "Coffee", "Permen", "Buah", "Dessert", "X-treme Food"};
 
     @Override
     public int getCount() {
-        if (kategori != null){
-            return kategori.length;
-        }else {
-            return 0;
-        }
+        // TODO Auto-generated method stub
+        return daftar_kategori.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return kategori[position];
+        // TODO Auto-generated method stub
+        return null;
     }
 
     @Override
     public long getItemId(int position) {
-        return position;
+        // TODO Auto-generated method stub
+        return 0;
     }
 
-    @SuppressLint("InflateParams")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if (convertView == null){
-            convertView = inflater.inflate(R.layout.custom_list_kategori, null);
+        // TODO Auto-generated method stub
+        View grid;
+        LayoutInflater inflater = (LayoutInflater) mContext
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        if (convertView == null) {
+
+            grid = new View(mContext);
+            grid = inflater.inflate(R.layout.custom_list_kategori, null);
+            TextView textView = (TextView) grid.findViewById(R.id.kategori);
+            ImageView imageView = (ImageView) grid.findViewById(R.id.menu_image);
+            textView.setText(daftar_kategori[position]);
+            imageView.setImageResource(Imageid[position]);
+        } else {
+            grid = (View) convertView;
         }
-        TextView kategori_ = (TextView)convertView.findViewById(R.id.kategori);
-        kategori_.setText(kategori[position]);
-        return convertView;
+
+        return grid;
     }
 }

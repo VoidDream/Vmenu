@@ -13,9 +13,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
+
+    GridView grid;
+    String[] daftar_kategori = {
+            "Special Drinks1",
+            "Special Drinks2",
+            "Special Drinks3"
+
+    } ;
+    int[] imageId = {
+            R.drawable.dummy_square,
+            R.drawable.dummy1_square,
+            R.drawable.dummy2_square
+
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,26 +52,17 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.kategori);
-        ListView daftar_kategori = (ListView)findViewById(R.id.daftar_kategori);
-        KategoriCustomAdapter kategori = new KategoriCustomAdapter(MainActivity.this);
-        daftar_kategori.setAdapter(kategori);
-        View footerView = ((LayoutInflater) this.getApplicationContext()
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(
-                R.layout.custom_list_footer, null, false);
-        daftar_kategori.addFooterView(footerView);
 
-        daftar_kategori.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        KategoriCustomAdapter adapter = new KategoriCustomAdapter(MainActivity.this, daftar_kategori, imageId);
+        grid=(GridView)findViewById(R.id.grid);
+        grid.setAdapter(adapter);
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
                 Intent intent_pencarian= new Intent(MainActivity.this, Pencarian.class);
                 startActivity(intent_pencarian);
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
