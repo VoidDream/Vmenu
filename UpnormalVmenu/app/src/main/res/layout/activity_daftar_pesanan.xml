@@ -7,7 +7,7 @@
     android:background="@android:color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.voidream.upnormalvmenu.DaftarPesanan">
+    tools:context="com.voidream.vmenu.DaftarPesanan">
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"

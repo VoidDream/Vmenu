@@ -1,4 +1,4 @@
-package com.voidream.upnormalvmenu;
+package com.voidream.vmenu;
 
 import org.junit.Test;
 

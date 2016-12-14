@@ -1,10 +1,8 @@
-package com.voidream.upnormalvmenu;
+package com.voidream.vmenu;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Typeface;
-import android.hardware.camera2.params.StreamConfigurationMap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

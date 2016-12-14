@@ -1,9 +1,7 @@
-package com.voidream.upnormalvmenu;
+package com.voidream.vmenu;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,59 +10,36 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
-
-    GridView grid;
-    String[] daftar_kategori = {
-            "Special Drinks1",
-            "Special Drinks2",
-            "Special Drinks3"
-
-    } ;
-    int[] imageId = {
-            R.drawable.dummy_square,
-            R.drawable.dummy1_square,
-            R.drawable.dummy2_square
-
-    };
-
+public class DaftarPesanan extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_daftar_pesanan);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent_pesanan= new Intent(MainActivity.this, DaftarPesanan.class);
-                startActivity(intent_pesanan);
+                Intent intent_pesan_sekarang= new Intent(DaftarPesanan.this, PesanSekarang.class);
+                startActivity(intent_pesan_sekarang);
 
             }
         });
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(R.string.kategori);
-
-        KategoriCustomAdapter adapter = new KategoriCustomAdapter(MainActivity.this, daftar_kategori, imageId);
-        grid=(GridView)findViewById(R.id.grid);
-        grid.setAdapter(adapter);
-        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                Intent intent_pencarian= new Intent(MainActivity.this, Pencarian.class);
-                startActivity(intent_pencarian);
-            }
-        });
+        getSupportActionBar().setTitle(R.string.daftar_pesanan);
+        ListView daftar_pesanan = (ListView)findViewById(R.id.daftar_pesanan);
+        DaftarPesananCustomAdapter pesanan = new DaftarPesananCustomAdapter(DaftarPesanan.this);
+        daftar_pesanan.setAdapter(pesanan);
+        View footerView = ((LayoutInflater) this.getApplicationContext()
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(
+                R.layout.custom_list_footer, null, false);
+        daftar_pesanan.addFooterView(footerView);
 
     }
 
@@ -83,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.pencarian) {
-            Intent intent_pencarian= new Intent(MainActivity.this, Pencarian.class);
+            Intent intent_pencarian= new Intent(DaftarPesanan.this, Pencarian.class);
             startActivity(intent_pencarian);
+            finish();
             return true;
         }
 

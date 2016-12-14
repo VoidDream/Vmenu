@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.voidream.upnormalvmenu">
+    package="com.voidream.vmenu">
 
     <supports-screens
         android:anyDensity="true"
@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.voidream.vmenu.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,23 +20,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Pencarian"
+            android:name="com.voidream.vmenu.Pencarian"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".DaftarPesanan"
+            android:name="com.voidream.vmenu.DaftarPesanan"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name=".PesanSekarang"
+            android:name="com.voidream.vmenu.PesanSekarang"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme2"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".PopupJumlahPesanan"
+            android:name="com.voidream.vmenu.PopupJumlahPesanan"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Translucent" />
-        <activity android:name=".SuksesMemesan"
+        <activity android:name="com.voidream.vmenu.SuksesMemesan"
             android:screenOrientation="portrait" />
     </application>
 

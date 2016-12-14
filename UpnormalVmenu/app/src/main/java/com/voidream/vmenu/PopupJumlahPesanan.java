@@ -1,4 +1,4 @@
-package com.voidream.upnormalvmenu;
+package com.voidream.vmenu;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
