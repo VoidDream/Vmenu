@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -33,13 +34,23 @@ public class Pencarian extends AppCompatActivity {
         MenuCustomAdapter menu = new MenuCustomAdapter(Pencarian.this);
         daftar_menu.setAdapter(menu);
 
+        daftar_menu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                Intent intent_main= new Intent(Pencarian.this, PopupJumlahPesanan.class);
+                startActivity(intent_main);
+            }
+        });
+
         ImageButton back = (ImageButton) findViewById(R.id.button_back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent_main= new Intent(Pencarian.this, PopupJumlahPesanan.class);
-                startActivity(intent_main);
+                finish();
+
             }
         });
 
