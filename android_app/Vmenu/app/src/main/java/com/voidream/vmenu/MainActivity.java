@@ -1,10 +1,13 @@
 package com.voidream.vmenu;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.DragEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,15 +18,27 @@ public class MainActivity extends AppCompatActivity {
 
     GridView grid;
     String[] daftar_kategori = {
-            "Super Motherfucker Fuckin Very Special Drinks ",
+            "Special Drinks1",
             "Special Drinks2",
-            "Special Drinks3"
+            "Special Drinks3",
+            "Special Drinks4",
+            "Special Drinks5",
+            "Special Drinks6",
+            "Special Drinks7",
+            "Holy Fuckin Super Special Drinks",
+            "footer"
 
     } ;
     int[] imageId = {
             R.drawable.dummy_square,
             R.drawable.dummy1_square,
-            R.drawable.dummy2_square
+            R.drawable.dummy2_square,
+            R.drawable.dummy_square,
+            R.drawable.dummy1_square,
+            R.drawable.dummy2_square,
+            R.drawable.dummy_square,
+            R.drawable.dummy1_square,
+            R.drawable.dummy_square
 
     };
 
@@ -47,6 +62,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.kategori);
+        toolbar.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent intent_pencarian= new Intent(MainActivity.this, AboutUs.class);
+                startActivity(intent_pencarian);
+                return false;
+            }
+        });
 
         KategoriCustomAdapter adapter = new KategoriCustomAdapter(MainActivity.this, daftar_kategori, imageId);
         grid=(GridView)findViewById(R.id.grid);

@@ -23,15 +23,26 @@ public class MenuCustomAdapter extends BaseAdapter {
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    private String[] menu = new String[]{"Vanilla Milkshake", "Tiramisu Coffee Latte", "Greentea Latte"};
-    private String[] detil = new String[]{"Susu sapi asli yang dikocok dengan kasih sayang dari seorang koki profesional dengan rasa panila yang gurih di lidah membuat anda mabuk kepayang",
+    private String[] menu = new String[]{
+            "Vanilla Milkshake",
+            "Tiramisu Coffee Latte",
+            "Greentea Latte",
+            "Susu"};
+    private String[] detil = new String[]{
+            "Susu sapi asli yang dikocok dengan kasih sayang dari seorang koki profesional dengan rasa panila yang gurih di lidah membuat anda mabuk kepayang",
             "Kopi Good Day rasa Tiramisu beli di warung pinggir jalan, manteb",
-            "Teh hijau dengan campuran latte, manteb"};
-    private String[] cost = new String[]{"35.000", "15.000", "7.500", "11.000"};
+            "Teh hijau dengan campuran latte, manteb",
+            "Susu sapi asli!"};
+    private String[] cost = new String[]{
+            "35.000",
+            "25.000",
+            "28.00",
+            "12.500"};
     private int[] imageId = {
                 R.drawable.dummy,
                 R.drawable.dummy1,
-                R.drawable.dummy2
+                R.drawable.dummy2,
+                R.drawable.dummy
 
     };
 

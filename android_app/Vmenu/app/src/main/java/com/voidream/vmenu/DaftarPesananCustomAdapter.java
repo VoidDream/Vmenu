@@ -3,6 +3,8 @@ package com.voidream.vmenu;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,8 +23,28 @@ public class DaftarPesananCustomAdapter extends BaseAdapter {
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    private String[] pesanan = new String[]{"2 Vanilla Milkshake", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "3 Dancow Dingin", "TOTAL"};
-    private String[] harga = new String[]{"Rp70.000", "Rp45.000", "Rp45.000","Rp45.000","Rp45.000","Rp45.000","Rp45.000","Rp45.000","Rp45.000", "Rp430.000"};
+    private String[] pesanan = new String[]{
+            "2 Vanilla Milkshake",
+            "3 Tiramisu Coffee Latte",
+            "2 Susu",
+            "1 Greentea Latte",
+            "2 Vanilla Milkshake",
+            "3 Tiramisu Coffee Latte",
+            "2 Susu",
+            "1 Greentea Latte",
+            "2 Vanilla Milkshake",
+            "TOTAL"};
+    private String[] harga = new String[]{
+            "Rp70.000",
+            "Rp75.000",
+            "Rp25.000",
+            "Rp28.000",
+            "Rp70.000",
+            "Rp75.000",
+            "Rp25.000",
+            "Rp28.000",
+            "Rp70.000",
+            "Rp416.000"};
 
     @Override
     public int getCount() {
@@ -53,7 +75,12 @@ public class DaftarPesananCustomAdapter extends BaseAdapter {
         TextView harga_ = (TextView)convertView.findViewById(R.id.harga);
         pesanan_.setText(pesanan[position]);
         harga_.setText(harga[position]);
-        //if(position==pesanan.length-1){pesanan_.setTypeface(Typeface.DEFAULT_BOLD);}
+
+        if (position == pesanan.length-1)
+        {
+            pesanan_.setTypeface(Typeface.DEFAULT_BOLD);
+            harga_.setTypeface(Typeface.DEFAULT_BOLD);
+        }
         return convertView;
     }
 }
