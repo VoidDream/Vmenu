@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Vmenu</string>
+    <string name="pencarian">Pencarian</string>\
+    <string name="kategori">Kategori</string>
+    <string name="daftar_pesanan">Daftar Pesanan</string>
+    <string name="nama_pemesan">Nama Pemesan</string>
+    <string name="meja">Table</string>
+    <string name="pesan_sekarang">Pesan Sekarang</string>
+    <string name="kirim">Kirim</string>
+    <string name="pesanan">Pesanan</string>
+    <string name="tambahkan">Tambahkan</string>
+    <string name="kembali">Kembali</string>
+    <string name="a_n">A/N</string>
+    <string name="pesanan_atas_nama">Pesanan Atas Nama</string>
+    <string name="telah_terkirim_nsilahkan_menunggu_pesanan_datang">Telah Terkirim!\nPesanan akan datang ke meja anda.</string>
+    <string name="company">Company</string>
+    <string name="voidream">Voidream</string>
+    <string name="back_end_programmer">Back-End Programmer</string>
+    <string name="ryvaldie_ishaq_hamdallah">Ryvaldie Ishaq Hamdallah</string>
+    <string name="client_amp_server_programmer"><![CDATA[Client & Server Programmer]]></string>
+    <string name="dwitya_bayusagara_arymurti">Dwitya Bayusagara Arymurti</string>
+    <string name="designer_amp_front_end_programmer"><![CDATA[Designer & Front-End Programmer]]></string>
+    <string name="abi_karami_wijaya">Abi Karami Wijaya</string>
+    <string name="marketing">Marketing</string>
+    <string name="lili_ramli">Lili Ramli</string>
+    <string name="thanks_to">Thanks to</string>
+    <string name="allah_swt_newtronic_solution_github_lenovo">
+        Allah SWT
+        \nAsus Smartphone
+        \nErgosit Chair
+        \nGithub
+        \nGoogle
+        \nKantin Mas Boy
+        \nLenovo Laptop &amp; Smartphone
+        \nNewtronic Solution
+        \nPilot Ballpoint
+        \nPhillips Lamp
+        \nSinar Dunia HVS Paper
+        \nSharp Air Conditioner
+        \nStackOverFlow
+        \nXiaomi Smartphone
+    </string>
+</resources>

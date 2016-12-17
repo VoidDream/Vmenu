@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dummy_square"
+        android:id="@+id/menu_image"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/kategori"
+        android:layout_alignParentTop="true"
+        android:id="@+id/relativeLayout"
+        android:background="@drawable/bottom_gradient"/>
+
+    <TextView
+        android:text="Special Drinks"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="-46dp"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/space_between_content"
+        android:paddingLeft="@dimen/space_between_content"
+        android:paddingRight="@dimen/space_between_content"
+        android:id="@+id/kategori"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="@dimen/static_body"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/menu_image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+
+
+
+</RelativeLayout>

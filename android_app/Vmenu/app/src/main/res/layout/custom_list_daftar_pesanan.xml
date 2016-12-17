@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider1"
+            app:srcCompat="@color/black22"
+            android:id="@+id/imageView" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/right_side_icon"
+            android:layout_marginRight="@dimen/right_side_icon">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pesanan"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/static_subheading"
+                android:textColor="@color/black87"
+                style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/harga"
+                android:textSize="@dimen/static_body"
+                android:textColor="@color/black54"
+                style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dummy"
+        android:id="@+id/menu_image"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottom_gradient"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/menu_image"
+        android:id="@+id/gradient">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:orientation="vertical"
+            android:id="@+id/layout_keterangan"
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+        android:layout_alignBottom="@+id/menu_image">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/screen_edge"
+                android:layout_marginLeft="@dimen/screen_edge"
+                android:layout_marginRight="@dimen/screen_edge">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nama"
+                    android:textSize="@dimen/static_title"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keterangan"
+                    android:textSize="@dimen/static_caption"
+                    android:textColor="@android:color/white"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/harga"
+                        android:textSize="@dimen/static_body"
+                        android:textColor="@android:color/white"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_chef_white_18dp"
+                        android:id="@+id/imageView2"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/imageView3"
+                        android:layout_toStartOf="@+id/imageView3" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_star_white_18dp"
+                        android:id="@+id/imageView3"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>
